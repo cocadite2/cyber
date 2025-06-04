@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyberbullying: O que fazer e onde denunciar</title>
+  <style>
+    :root {
+      --primary-color: #1e90ff;
+      --accent-color: #ff3366;
+      --background-color: #000000;
+      --text-color: #ddd;
+      --card-bg: #121212;
+      --border-radius: 8px;
+      --shadow: rgba(255, 255, 255, 0.1);
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+      box-shadow: 0 3px 6px var(--shadow);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px var(--shadow);
+      padding: 20px 25px;
+      margin-bottom: 25px;
+    }
+    section h2 {
+      color: var(--accent-color);
+      margin-top: 0;
+      font-weight: 700;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: var(--accent-color);
+      outline: none;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      padding: 12px;
+      border-radius: var(--border-radius);
+      border: 1px solid #444;
+      font-size: 1rem;
+      font-family: var(--font-family);
+      margin-bottom: 15px;
+      background-color: #222;
+      color: var(--text-color);
+      transition: border-color 0.3s ease;
+    }
+    textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: var(--border-radius);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+    button:hover,
+    button:focus {
+      background-color: var(--accent-color);
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: auto;
+    }
+    /* Responsive */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      main {
+        margin: 20px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cyberbullying: O que fazer e onde denunciar</h1>
+  </header>
+  <main>
+    <section>
+      <h2>O que é Cyberbullying?</h2>
+      <p>Cyberbullying é o uso da internet, redes sociais, mensagens e outras tecnologias para intimidar, humilhar ou prejudicar outras pessoas de forma repetida.</p>
+    </section>
+
+    <section>
+      <h2>O que fazer se você for vítima?</h2>
+      <ul>
+        <li><strong>Não responda:</strong> Evite interagir com o agressor, pois isso pode aumentar o problema.</li>
+        <li><strong>Guarde provas:</strong> Tire prints, salve mensagens e registre qualquer evidência do abuso.</li>
+        <li><strong>Bloqueie o agressor:</strong> Use as ferramentas da rede social ou aplicativo para bloquear e denunciar o perfil.</li>
+        <li><strong>Converse com alguém de confiança:</strong> Famílias, amigos, professores ou profissionais de saúde podem ajudar.</li>
+        <li><strong>Procure ajuda profissional:</strong> Psicólogos e assistentes sociais podem orientar e ajudar a superar o impacto emocional.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Onde denunciar?</h2>
+      <ul>
+        <li>Acesse a <a href="https://www.safernet.org.br/" target="_blank" rel="noopener">SaferNet Brasil</a>, que oferece suporte e canais para denúncias eletrônicas.</li>
+        <li>Denuncie nas próprias redes sociais (Facebook, Instagram, Twitter, TikTok, WhatsApp) usando as opções de denúncia disponíveis.</li>
+        <li>Procure delegacias especializadas em crimes cibernéticos da sua cidade ou estado.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conte seu caso de forma anônima</h2>
+      <form id="anon-form" action="#" method="post" onsubmit="submitCase(event)">
+        <label for="case-textarea">Descreva seu caso aqui:</label>
+        <textarea id="case-textarea" name="case" placeholder="Escreva aqui seu relato de cyberbullying..." required></textarea>
+        <button type="submit">Enviar relato anônimo</button>
+      </form>
+      <p id="form-message" style="color:var(--accent-color); font-weight:700; margin-top:12px;"></p>
+    </section>
+  </main>
+  <footer>
+    © 2024 Informativo Cyberbullying - Seu espaço seguro
+  </footer>
+
+  <script>
+    function submitCase(event) {
+      event.preventDefault();
+      const textarea = document.getElementById('case-textarea');
+      const message = document.getElementById('form-message');
+      if(textarea.value.trim().length === 0) {
+        message.textContent = 'Por favor, escreva seu relato antes de enviar.';
+        return;
+      }
+      textarea.value = '';
+      message.textContent = 'Obrigado por compartilhar seu relato de forma anônima. Você não está sozinho(a).';
+    }
+  </script>
+</body>
+</html>
+
